@@ -69,17 +69,16 @@ body {
     border: none;
     padding: 10px 24px 10px 24px;
     margin-top: -6px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.logBtn:hover {
+    
+    color:#E02C6D;
+    background-color: #3DBAFD;
+    
 }
 
-.loginIcon {
-    width: 33%;
-}
-
-.logTxt {
-    position: relative;
-    top: -7px;
-    left: 2px;
-}
 
 /* ==================================================================
                         Nav Style END
@@ -232,58 +231,7 @@ body {
 ===================================================================== */
 
 
-/* --------------------------------------------------------------------------
-                               Media Queries
-------------------------------------------------------------------------------*/
-/* ==========Mobile devices========== */
-@media only screen and (max-width:688px) {
-    .nav-bar {
-        display: none;
-    }
 
-    .topSection {
-        width: 100%;
-        flex-direction: row;
-    }
-
-    .pageTitel {
-        width: 50%;
-        color: #fff;
-        margin: 43px 0px 0px 27px;
-        display: inline-block;
-    }
-
-    .main-titel {
-        font-size: 35px;
-        font-weight: bolder;
-        width: 100%;
-        line-height: 45px;
-        transition: all .3s ease-in-out;
-        display: inline-block;
-    }
-
-
-    .main-section {
-        display: none;
-    }
-
-    .highlight {
-        visibility: hidden;
-
-    }
-
-    .location {
-        display: none;
-    }
-
-    .sponsor-section {
-        display: none;
-    }
-
-    footer {
-        display: none;
-    }
-}
 
 /* ==================================================================
               Match Highlight section Style START
@@ -434,3 +382,60 @@ footer {
 /* ==================================================================
                      Web footer Style END
 ===================================================================== */
+
+
+
+
+/* --------------------------------------------------------------------------
+                               Media Queries
+------------------------------------------------------------------------------*/
+/* ==========Mobile devices========== */
+@media only screen and (max-width:688px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .topSection {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .pageTitel {
+        width: 50%;
+        color: #fff;
+        margin: 43px 0px 0px 27px;
+        display: inline-block;
+    }
+
+    .main-titel {
+        font-size: 35px;
+        font-weight: bolder;
+        width: 100%;
+        line-height: 45px;
+        transition: all .3s ease-in-out;
+        display: inline-block;
+    }
+
+
+    .main-section {
+        display: none;
+    }
+
+    .match-highlight {
+        display: none;
+    }
+
+
+
+    .location {
+        display: none;
+    }
+
+    .sponsor-section {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
