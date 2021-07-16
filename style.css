@@ -1,0 +1,436 @@
+/* ==================================================================
+                        Common Style START
+===================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    width: 1360px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* ==================================================================
+                        Common Style END
+===================================================================== */
+
+
+
+
+
+/* ==================================================================
+                        Nav Style START
+===================================================================== */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 44px;
+    font-size: 15px;
+    background-color: #2D25A0;
+    font-weight: 100;
+}
+
+.nav-items {
+    display: flex;
+    margin-left: 145px;
+    color: #fff;
+}
+
+.nav-items:first-child {
+    padding-left: none;
+
+}
+
+.nav-item {
+    padding: 2px 20px;
+    color: #f1f1f1;
+}
+
+.nav-item:hover {
+    color: #E02C6D;
+    transition: all .5s ease;
+}
+
+.login-button {
+    margin-right: 120px;
+}
+
+.logBtn {
+    width: 120px;
+    height: 42px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #E02C6D;
+    border: none;
+    padding: 10px 24px 10px 24px;
+    margin-top: -6px;
+}
+
+.loginIcon {
+    width: 33%;
+}
+
+.logTxt {
+    position: relative;
+    top: -7px;
+    left: 2px;
+}
+
+/* ==================================================================
+                        Nav Style END
+===================================================================== */
+
+
+
+/* ==================================================================
+                        Top section Style START
+===================================================================== */
+.topSection {
+    width: 100%;
+    background-color: #2D25A0;
+    display: flex;
+    padding-bottom: 60px;
+
+}
+
+.pageTitel {
+    width: 40%;
+    color: #fff;
+    margin-left: 12%;
+    margin-top: 145px;
+}
+
+.main-titel {
+    font-size: 55px;
+    font-weight: bolder;
+    width: 76%;
+    line-height: 79px;
+    transition: all .3s ease-in-out;
+}
+
+.different-color {
+    color: #E02C6D;
+}
+
+.main-titel:hover {
+    color: #3DBAFD;
+    text-shadow: 2px 2px #e4e4e4ea;
+
+}
+
+
+.pageThumbnail {
+    width: 40%;
+}
+
+.pageThumbnail img {
+    width: 95%;
+    margin-top: 86px;
+    margin-right: 5%;
+    transition: all .3s ease-in;
+}
+
+.pageThumbnail img:hover {
+    transform: scale(1.2);
+
+}
+
+.watch-live-button {
+    color: #fff;
+    background-color: #E02C6D;
+    border: none;
+    padding: 12px 29px;
+    margin-top: 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.watch-live-button:hover {
+
+    background-color: #3DBAFD;
+    transition: all .5s ease;
+
+}
+
+.watch-live-button:hover>a {
+    color: darkblue;
+    transition: all .5s ease;
+
+}
+
+.watch-live-button>a {
+    color: #fff;
+
+}
+
+/* ==================================================================
+                        Top section Style END
+===================================================================== */
+
+
+
+
+
+/* ==================================================================
+              Main Section(player gallery) Style START
+===================================================================== */
+
+.main-section {
+    width: 100%;
+    margin-left: 21px;
+}
+
+
+.players-gallery {
+    display: grid;
+    width: 1050px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 33%);
+    grid-gap: 27px 0px;
+    margin-top: 96px;
+
+}
+
+.player {
+    width: 280px;
+    height: 422px;
+    box-shadow: 2px 2px 20px #dbdbdbe8;
+    font-weight: 100;
+    line-height: 20px;
+    padding: 12px 12px 18px;
+    transition: all .5s ease-in-out;
+
+}
+
+.player:hover {
+    transform: scale(1.09);
+
+}
+
+.playerPhoto {
+    width: 100%;
+}
+
+.playerName {
+    margin: 20px 0px;
+}
+
+.playerAbout {
+    font-size: 14px;
+    color: #4e4b4bc5;
+
+}
+
+/* ==================================================================
+              Main Section(player gallery) Style END
+===================================================================== */
+
+
+/* --------------------------------------------------------------------------
+                               Media Queries
+------------------------------------------------------------------------------*/
+/* ==========Mobile devices========== */
+@media only screen and (max-width:688px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .topSection {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .pageTitel {
+        width: 50%;
+        color: #fff;
+        margin: 43px 0px 0px 27px;
+        display: inline-block;
+    }
+
+    .main-titel {
+        font-size: 35px;
+        font-weight: bolder;
+        width: 100%;
+        line-height: 45px;
+        transition: all .3s ease-in-out;
+        display: inline-block;
+    }
+
+
+    .main-section {
+        display: none;
+    }
+
+    .highlight {
+        visibility: hidden;
+
+    }
+
+    .location {
+        display: none;
+    }
+
+    .sponsor-section {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+/* ==================================================================
+              Match Highlight section Style START
+===================================================================== */
+.match-highlight {
+    display: flex;
+    margin-top: 160px;
+}
+
+.highlight {
+    width: 32%;
+    margin-left: 13%;
+
+
+}
+
+.discription h1 {
+    font-size: 45px;
+}
+
+.best-moment {
+    width: 40%;
+    margin-left: 8%;
+}
+
+.best-moment img {
+    width: 100%;
+
+}
+
+/* ==================================================================
+               Match Highlight section  Style END
+===================================================================== */
+
+
+
+
+
+
+/* ==================================================================
+               Location section  Style START
+===================================================================== */
+.location {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.titelExtra {
+
+    margin-bottom: 50px;
+    font-size: 45px;
+    color: #2D25A0;
+}
+
+.location-area>iframe {
+    width: 100%;
+
+}
+
+/* ==================================================================
+                Location  Highlight section  Style END
+===================================================================== */
+
+
+
+
+
+
+
+/* ==================================================================
+                    Sponser section  Style Start
+===================================================================== */
+
+.sponsor-section {
+    margin-top: 200px;
+}
+
+.titelExtra {
+    text-align: center;
+    color: rgba(255, 124, 77, 0.966);
+
+}
+
+.sponsors {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.sponsor {
+    width: 200px;
+}
+
+.sponsor img {
+    width: 100%;
+}
+
+/* ==================================================================
+                      Sponser section Style END
+===================================================================== */
+
+
+/* ==================================================================
+                   Web footer Style START
+===================================================================== */
+footer {
+    margin: 180px 0px 70px;
+
+}
+
+.web-logo {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.web-logo img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.social-icons,
+.copyrith {
+    text-align: center;
+
+}
+
+.copyrith {
+    color: #646464;
+}
+
+.icons {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: #2D25A0;
+    border: 1px solid #2D25A0;
+    border-radius: 50%;
+
+}
+
+.icons:hover {
+    background-color: #2D25A0;
+    color: #fff;
+    transition: all .5s ease;
+
+}
+
+/* ==================================================================
+                     Web footer Style END
+===================================================================== */
