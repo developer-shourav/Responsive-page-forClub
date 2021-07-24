@@ -5,14 +5,20 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+
 }
 
 body {
-    width: 1360px;
-    margin: 0 auto;
+
+
     font-family: 'Poppins', sans-serif;
     background-color: #fff;
-    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ==================================================================
@@ -26,7 +32,12 @@ body {
 /* ==================================================================
                         Nav Style START
 ===================================================================== */
+header {
+    display: flex;
+}
+
 .nav-bar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-top: 44px;
@@ -41,10 +52,6 @@ body {
     color: #fff;
 }
 
-.nav-items:first-child {
-    padding-left: none;
-
-}
 
 .nav-item {
     padding: 2px 20px;
@@ -72,11 +79,12 @@ body {
     font-weight: bold;
     border-radius: 2px;
 }
+
 .logBtn:hover {
-    
-    color:#E02C6D;
+
+    color: #E02C6D;
     background-color: #3DBAFD;
-    
+
 }
 
 
@@ -122,20 +130,21 @@ body {
 
 }
 
-
 .pageThumbnail {
-    width: 40%;
+    width: 46%;
 }
 
 .pageThumbnail img {
-    width: 95%;
-    margin-top: 86px;
-    margin-right: 5%;
+    width: 92%;
+    margin-top: 32px;
+    margin-left: 6%;
     transition: all .3s ease-in;
 }
 
+
+
 .pageThumbnail img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 
 }
 
@@ -177,32 +186,30 @@ body {
 
 
 /* ==================================================================
-              Main Section(player gallery) Style START
+             card Section(player gallery) Style START
 ===================================================================== */
 
-.main-section {
-    width: 100%;
-    margin-left: 21px;
+.card-section {
+    width: 1050px;
+
 }
 
 
 .players-gallery {
     display: grid;
-    width: 1050px;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 33%);
-    grid-gap: 27px 0px;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 23px;
     margin-top: 96px;
 
 }
 
 .player {
-    width: 280px;
-    height: 422px;
+
     box-shadow: 2px 2px 20px #dbdbdbe8;
     font-weight: 100;
     line-height: 20px;
-    padding: 12px 12px 18px;
+    padding: 15px 15px 35px;
     transition: all .5s ease-in-out;
 
 }
@@ -221,13 +228,13 @@ body {
 }
 
 .playerAbout {
-    font-size: 14px;
+    font-size: 15px;
     color: #4e4b4bc5;
 
 }
 
 /* ==================================================================
-              Main Section(player gallery) Style END
+             card Section(player gallery) Style END
 ===================================================================== */
 
 
@@ -237,14 +244,16 @@ body {
               Match Highlight section Style START
 ===================================================================== */
 .match-highlight {
+    width: 1050px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 160px;
 }
 
 .highlight {
-    width: 32%;
-    margin-left: 13%;
-
+    width: 45%;
+    margin-right: 7%;
 
 }
 
@@ -253,8 +262,8 @@ body {
 }
 
 .best-moment {
-    width: 40%;
-    margin-left: 8%;
+    width: 50%;
+
 }
 
 .best-moment img {
@@ -277,13 +286,14 @@ body {
 .location {
     text-align: center;
     margin-top: 200px;
+    width: 100%;
 }
 
 .titelExtra {
 
     margin-bottom: 50px;
     font-size: 45px;
-    color: #2D25A0;
+
 }
 
 .location-area>iframe {
@@ -311,7 +321,8 @@ body {
 
 .titelExtra {
     text-align: center;
-    color: rgba(255, 124, 77, 0.966);
+    color: #ff7c4df6;
+    text-shadow: 1px 1px #272727;
 
 }
 
@@ -322,10 +333,16 @@ body {
 
 .sponsor {
     width: 200px;
+
+}
+
+.sponsor:hover img {
+    transform: scale(1.2);
 }
 
 .sponsor img {
-    width: 100%;
+    width: 90%;
+    transition: all .5s ease;
 }
 
 /* ==================================================================
@@ -358,9 +375,12 @@ footer {
 
 }
 
-.copyrith {
+.copyrith,
+.copyrith a {
     color: #646464;
 }
+
+
 
 .icons {
     padding: 10px;
@@ -369,7 +389,6 @@ footer {
     color: #2D25A0;
     border: 1px solid #2D25A0;
     border-radius: 50%;
-
 }
 
 .icons:hover {
@@ -386,56 +405,410 @@ footer {
 
 
 
+
+
+
+
 /* --------------------------------------------------------------------------
                                Media Queries
 ------------------------------------------------------------------------------*/
-/* ==========Mobile devices========== */
-@media only screen and (max-width:688px) {
-    .nav-bar {
+
+
+
+/* ===========================Mobile devices================================== */
+
+@media only screen and (max-width:767px) {
+    /* body{
+        overflow-x: hidden;
+    } */
+    header {
         display: none;
+
+    }
+
+
+    /*----------Top Section-------------- */
+    .topSection {
+        width: auto;
+        flex-direction: column;
+
+    }
+
+    .pageTitel {
+        width: auto;
+        margin-top: 70px;
+
+    }
+
+    .main-titel {
+        font-size: 50px;
+        line-height: 60px;
+        transition: all .3s ease-in-out;
+    }
+
+    .pageThumbnail {
+        width: 100%;
+        margin: 0;
+    }
+
+    .pageThumbnail img {
+        width: 85%;
+        margin-top: 24px;
+        transition: all .3s ease-in;
+    }
+
+    .watch-live-button {
+
+        padding: 20px 35px;
+        margin-top: 30px;
+        font-size: 20px;
+        margin-bottom: 42px;
+
+    }
+
+    /* ------------card sections------------- */
+    .card-section {
+        width: auto;
+        padding: 0px 30px;
+
+
+    }
+
+
+    .players-gallery {
+        display: grid;
+        width: auto;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 60px;
+
+    }
+
+    .player {
+
+        transition: all .3s ease-in-out;
+
+    }
+
+    .player:hover {
+        transform: scale(1.07);
+
+    }
+
+    .playerAbout {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.4em;
+
+    }
+
+    /* -------------Match highlight section------------ */
+    .match-highlight {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .highlight {
+        width: 100%;
+        margin: 0;
+
+
+    }
+
+    .highlight article {
+        padding: 0px 30px;
+
+
+    }
+
+    .discription h1 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .best-moment {
+        width: 100%;
+        padding: 0px 30px;
+
+
+    }
+
+    .best-moment img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* -------------Location--------------- */
+    .location {
+        margin-top: 87px;
+        width: 100%;
+    }
+
+    .titelExtra {
+        margin-bottom: 24px;
+        font-size: 32px;
+    }
+
+    /* ------------ spnor section----------------- */
+    .sponsor-section {
+        margin-top: 49px;
+
+    }
+
+
+
+
+
+
+
+    .sponsor:hover img {
+        transform: scale(1.05);
+    }
+
+    .sponsor img {
+        width: 90%;
+        transition: all .5s ease;
+    }
+
+    /* ------------ spnor section----------------- */
+
+
+
+
+    .sponsors {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px 25px;
+    }
+
+    .sponsor {
+        width: 90px;
+        border: 1px solid #3d3d3d41;
+        box-shadow: inset 5px 5px 8px rgb(61 61 61 / 36%), -2px -2px 9px #d7e8fcb3;
+        border-radius: 30px;
+        padding: 4px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .sponsor:hover img {
+        transform: scale(1.1);
+    }
+
+    .sponsor img {
+        width: 90%;
+        transition: all .3s ease;
+    }
+
+
+    /* ------------Footer section-------------- */
+    footer {
+        margin-top: 88px;
+        width: auto;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .web-logo {
+        width: 200px;
+        margin-top: 27px;
+        margin-bottom: 6px;
+    }
+
+    .web-logo img {
+        width: 78%;
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        width: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ===========================For medium Devices============================ */
+
+@media only screen and (min-width:768px) and (max-width:992px) {
+
+    header {
+        display: none;
+
     }
 
     .topSection {
-        width: 100%;
-        flex-direction: row;
+        width: auto;
+        height: auto;
+
+
     }
 
     .pageTitel {
         width: 50%;
-        color: #fff;
-        margin: 43px 0px 0px 27px;
-        display: inline-block;
+        margin-top: 73px;
+        margin-left: 30px;
+
     }
 
-    .main-titel {
-        font-size: 35px;
-        font-weight: bolder;
+    .pageThumbnail {
+        width: 50%;
+        margin: 0;
+        padding-top: 77px;
+    }
+
+    .pageThumbnail img {
         width: 100%;
-        line-height: 45px;
-        transition: all .3s ease-in-out;
-        display: inline-block;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    /* ------------card sections------------- */
+    .card-section {
+        width: auto;
+        padding: 0px 30px;
+
+
     }
 
 
-    .main-section {
-        display: none;
+    .players-gallery {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 60px;
+
     }
 
+    /* -------------Match highlight section------------ */
     .match-highlight {
-        display: none;
+        width: auto;
+        margin-top: 60px;
     }
 
+    .highlight {
+        width: 100%;
+        margin: 0;
 
 
+    }
+
+    .highlight article {
+        padding: 0px 30px;
+
+
+    }
+
+    .discription h1 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .best-moment {
+        width: 100%;
+        padding: 0px 30px;
+
+
+    }
+
+    .best-moment img {
+        width: 100%;
+        margin: 0 auto;
+
+
+
+    }
+
+    /* -------------Location--------------- */
     .location {
-        display: none;
+
+        margin-top: 87px;
+        width: 100%;
     }
 
+
+    .location-area>iframe {
+        width: 100%;
+    }
+
+    /* ------------ spnor section----------------- */
     .sponsor-section {
-        display: none;
+        margin-top: 49px;
+        margin-bottom: 20px;
     }
 
-    footer {
-        display: none;
+    .titelExtra {
+        text-align: center;
+        color: #ff7c4df6;
+        text-shadow: 1px 1px #272727;
+
     }
+
+    .sponsors {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px 30px;
+    }
+
+    .sponsor {
+        width: 154px;
+        border: 1px solid #3d3d3d41;
+        box-shadow: inset 5px 5px 8px rgb(61 61 61 / 36%), -2px -2px 9px #d7e8fcb3;
+        border-radius: 30px;
+        padding: 10px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .sponsor:hover img {
+        transform: scale(1.1);
+    }
+
+    .sponsor img {
+        width: 90%;
+        transition: all .3s ease;
+    }
+
+    /* ------------Footer section-------------- */
+    footer {
+        margin-top: 88px;
+        width: auto;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .web-logo {
+        width: 300px;
+
+    }
+
+    .web-logo img {
+        width: 100%;
+        margin: 51px 0px 2px;
+
+    }
+
+    .social-icons {
+        width: 100%;
+    }
+
 }
